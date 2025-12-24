@@ -1,17 +1,17 @@
-<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>技术面试的分享 | 漫游</title><meta name="author" content="欧不爱吃HAM堡王"><meta name="copyright" content="欧不爱吃HAM堡王"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="技术面试问题 CTF 说一个印象深刻的CTF的题目 sql二次注入     Python 爬虫模块、框架、反爬虫机制（IP-&gt;代理池、验证码破解、UA） 并发(多线程、线程池、协程、三个程之间的区别) 常用的标准库 DJANGO和FLASK区别和使用 ORM python安全工具编写&#x2F;源码阅读 证明能力   密码学 RSA DES AES 国内SM系列   风险评估 流程 三要素">
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>技术考题分享 | 漫游</title><meta name="author" content="欧不爱吃HAM堡王"><meta name="copyright" content="欧不爱吃HAM堡王"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;25582026   这篇我觉得写得很详细全面： 给你一个网站你是如何来渗透测试的? - 杨文的文章 - 知乎 http:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;25605198  技术面试问题CTF说一个印象深刻的CTF的题目 Padding Oracle-&gt;CBC-&gt;密码学(RSA&#x2F;AES&#x2F;DSA">
 <meta property="og:type" content="website">
-<meta property="og:title" content="技术面试的分享">
-<meta property="og:url" content="http://ycmaver.github.io/2025/12/19/%E6%8A%80%E6%9C%AF%E9%9D%A2%E7%9A%84%E5%88%86%E4%BA%AB/index.html">
+<meta property="og:title" content="技术考题分享">
+<meta property="og:url" content="http://ycmaver.github.io/2025/12/21/%E6%8A%80%E6%9C%AF%E8%80%83%E9%A2%98%E5%88%86%E4%BA%AB/index.html">
 <meta property="og:site_name" content="漫游">
-<meta property="og:description" content="技术面试问题 CTF 说一个印象深刻的CTF的题目 sql二次注入     Python 爬虫模块、框架、反爬虫机制（IP-&gt;代理池、验证码破解、UA） 并发(多线程、线程池、协程、三个程之间的区别) 常用的标准库 DJANGO和FLASK区别和使用 ORM python安全工具编写&#x2F;源码阅读 证明能力   密码学 RSA DES AES 国内SM系列   风险评估 流程 三要素">
+<meta property="og:description" content="https:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;25582026   这篇我觉得写得很详细全面： 给你一个网站你是如何来渗透测试的? - 杨文的文章 - 知乎 http:&#x2F;&#x2F;zhuanlan.zhihu.com&#x2F;p&#x2F;25605198  技术面试问题CTF说一个印象深刻的CTF的题目 Padding Oracle-&gt;CBC-&gt;密码学(RSA&#x2F;AES&#x2F;DSA">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://ycmaver.github.io/img/kyrie.jpg">
-<meta property="article:published_time" content="2025-12-19T10:53:21.000Z">
-<meta property="article:modified_time" content="2025-12-19T14:45:02.388Z">
+<meta property="article:published_time" content="2025-12-21T10:53:21.000Z">
+<meta property="article:modified_time" content="2025-12-23T13:47:57.930Z">
 <meta property="article:author" content="欧不爱吃HAM堡王">
 <meta property="article:tag" content="网络安全">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="http://ycmaver.github.io/img/kyrie.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/"><link rel="canonical" href="http://ycmaver.github.io/2025/12/19/%E6%8A%80%E6%9C%AF%E9%9D%A2%E7%9A%84%E5%88%86%E4%BA%AB/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
+<meta name="twitter:image" content="http://ycmaver.github.io/img/kyrie.jpg"><script type="application/ld+json"></script><link rel="shortcut icon" href="/"><link rel="canonical" href="http://ycmaver.github.io/2025/12/21/%E6%8A%80%E6%9C%AF%E8%80%83%E9%A2%98%E5%88%86%E4%BA%AB/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//hm.baidu.com"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css?v=5.5.2"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@7.1.0/css/all.min.css"><script>
     (() => {
       
     const saveToLocal = {
@@ -150,258 +150,15 @@ btf.addGlobalFn('pjaxComplete', () => {
   },
   autoDarkmode: false
 }</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
-  title: '技术面试的分享',
+  title: '技术考题分享',
   isHighlightShrink: false,
   isToc: false,
   pageType: 'blog'
-}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="web_bg" style="background-image: url(/img/lo.jpeg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/kyrie.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/About%20me/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url(/img/lo.jpeg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">漫游</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/About%20me/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">技术面试的分享</h1></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><ul>
-<li><a href="#%E6%8A%80%E6%9C%AF%E9%9D%A2%E8%AF%95%E9%97%AE%E9%A2%98">技术面试问题</a><ul>
-<li><a href="#ctf">CTF</a><ul>
-<li><a href="#%E8%AF%B4%E4%B8%80%E4%B8%AA%E5%8D%B0%E8%B1%A1%E6%B7%B1%E5%88%BB%E7%9A%84ctf%E7%9A%84%E9%A2%98%E7%9B%AE">说一个印象深刻的CTF的题目</a><ul>
-<li><a href="#sql%E4%BA%8C%E6%AC%A1%E6%B3%A8%E5%85%A5">sql二次注入</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#python">Python</a><ul>
-<li><a href="#%E7%88%AC%E8%99%AB%E6%A8%A1%E5%9D%97%E6%A1%86%E6%9E%B6%E5%8F%8D%E7%88%AC%E8%99%AB%E6%9C%BA%E5%88%B6ip-%E4%BB%A3%E7%90%86%E6%B1%A0%E9%AA%8C%E8%AF%81%E7%A0%81%E7%A0%B4%E8%A7%A3ua">爬虫模块、框架、反爬虫机制（IP-&gt;代理池、验证码破解、UA）</a></li>
-<li><a href="#%E5%B9%B6%E5%8F%91%E5%A4%9A%E7%BA%BF%E7%A8%8B%E7%BA%BF%E7%A8%8B%E6%B1%A0%E5%8D%8F%E7%A8%8B%E4%B8%89%E4%B8%AA%E7%A8%8B%E4%B9%8B%E9%97%B4%E7%9A%84%E5%8C%BA%E5%88%AB">并发(多线程、线程池、协程、三个程之间的区别)</a></li>
-<li><a href="#%E5%B8%B8%E7%94%A8%E7%9A%84%E6%A0%87%E5%87%86%E5%BA%93">常用的标准库</a></li>
-<li><a href="#django%E5%92%8Cflask%E5%8C%BA%E5%88%AB%E5%92%8C%E4%BD%BF%E7%94%A8">DJANGO和FLASK区别和使用</a></li>
-<li><a href="#orm">ORM</a></li>
-<li><a href="#python%E5%AE%89%E5%85%A8%E5%B7%A5%E5%85%B7%E7%BC%96%E5%86%99%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB">python安全工具编写&#x2F;源码阅读</a></li>
-<li><a href="#%E8%AF%81%E6%98%8E%E8%83%BD%E5%8A%9B">证明能力</a></li>
-</ul>
-</li>
-<li><a href="#%E5%AF%86%E7%A0%81%E5%AD%A6">密码学</a><ul>
-<li><a href="#rsa">RSA</a></li>
-<li><a href="#des">DES</a></li>
-<li><a href="#aes">AES</a></li>
-<li><a href="#%E5%9B%BD%E5%86%85sm%E7%B3%BB%E5%88%97">国内SM系列</a></li>
-</ul>
-</li>
-<li><a href="#%E9%A3%8E%E9%99%A9%E8%AF%84%E4%BC%B0">风险评估</a><ul>
-<li><a href="#%E6%B5%81%E7%A8%8B">流程</a></li>
-<li><a href="#%E4%B8%89%E8%A6%81%E7%B4%A0">三要素</a></li>
-</ul>
-</li>
-<li><a href="#%E4%BB%A3%E7%A0%81%E5%AE%A1%E8%AE%A1">代码审计</a><ul>
-<li><a href="#fority-sca%E5%AE%A1%E8%AE%A1java%E4%BB%A3%E7%A0%81">Fority SCA审计JAVA代码</a></li>
-<li><a href="#seay%E5%AE%A1%E8%AE%A1php%E4%BB%A3%E7%A0%81">Seay审计PHP代码</a></li>
-<li><a href="#%E6%BA%90%E7%A0%81%E9%98%85%E8%AF%BB">源码阅读</a></li>
-</ul>
-</li>
-<li><a href="#%E5%BA%94%E6%80%A5%E5%93%8D%E5%BA%94%E5%85%B7%E4%BD%93%E6%B5%81%E7%A8%8B">应急响应具体流程</a><ul>
-<li><a href="#%E6%A8%A1%E5%9E%8B">模型</a></li>
-<li><a href="#%E5%AE%9E%E4%BE%8B">实例</a><ul>
-<li><a href="#ddos">DDOS</a><ul>
-<li><a href="#ddos%E6%98%AF%E4%BB%80%E4%B9%88">DDOS是什么</a></li>
-</ul>
-</li>
-<li><a href="#%E5%AE%9E%E4%BE%8B-1">实例</a></li>
-<li><a href="#%E4%B8%BB%E6%9C%BA%E8%A2%AB%E5%85%A5%E4%BE%B5">主机被入侵</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B%E7%9B%B8%E5%85%B3">渗透测试流程相关</a><ul>
-<li><a href="#%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E6%B5%81%E7%A8%8B">渗透测试流程</a></li>
-<li><a href="#%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E9%A1%B9%E7%9B%AE">渗透测试项目</a></li>
-<li><a href="#%E6%B8%97%E9%80%8F%E6%B5%8B%E8%AF%95%E5%85%B7%E4%BD%93%E5%AE%9E%E6%96%BD">渗透测试具体实施</a></li>
-<li><a href="#17%E5%B9%B4owasp-top10">17年OWASP TOP10</a></li>
-<li><a href="#%E5%B8%B8%E8%A7%81%E7%9A%84web%E5%AE%89%E5%85%A8%E6%BC%8F%E6%B4%9E">常见的Web安全漏洞</a></li>
-<li><a href="#%E6%8C%96%E8%BF%87%E4%BB%80%E4%B9%88%E9%80%BB%E8%BE%91%E6%BC%8F%E6%B4%9E">挖过什么逻辑漏洞</a><ul>
-<li><a href="#%E8%AE%A2%E5%8D%95%E4%BB%BB%E6%84%8F%E9%87%91%E9%A2%9D%E4%BF%AE%E6%94%B9">订单任意金额修改</a></li>
-<li><a href="#%E9%AA%8C%E8%AF%81%E7%A0%81%E5%9B%9E%E4%BC%A0">验证码回传</a></li>
-<li><a href="#%E6%9C%AA%E8%BF%9B%E8%A1%8C%E7%99%BB%E9%99%86%E5%87%AD%E8%AF%81%E9%AA%8C%E8%AF%81">未进行登陆凭证验证</a></li>
-<li><a href="#%E6%8E%A5%E5%8F%A3%E6%97%A0%E9%99%90%E5%88%B6%E6%9E%9A%E4%B8%BE">接口无限制枚举</a></li>
-<li><a href="#cookie%E8%AE%BE%E7%BD%AE%E5%AD%98%E5%9C%A8%E7%BC%BA%E9%99%B7">cookie设置存在缺陷</a></li>
-</ul>
-</li>
-<li><a href="#%E6%89%BE%E5%9B%9E%E5%AF%86%E7%A0%81%E5%8A%9F%E8%83%BD%E7%BC%BA%E9%99%B7">找回密码功能缺陷</a></li>
-<li><a href="#%E4%BD%A0%E5%B8%B8%E7%94%A8%E7%9A%84%E6%B8%97%E9%80%8F%E5%B7%A5%E5%85%B7%E6%9C%89%E5%93%AA%E4%BA%9B%E6%9C%80%E5%B8%B8%E7%94%A8%E7%9A%84%E6%98%AF%E5%93%AA%E4%B8%AA">你常用的渗透工具有哪些，最常用的是哪个？</a><ul>
-<li><a href="#%E6%89%AB%E6%8F%8Fnessusawvsnikto">扫描:Nessus,AWVS,Nikto</a></li>
-<li><a href="#sqlmap">SQLmap</a></li>
-<li><a href="#nmap">Nmap</a></li>
-<li><a href="#metasploit">Metasploit</a></li>
-<li><a href="#hydra">Hydra</a></li>
-<li><a href="#kali%E4%BF%A1%E6%81%AF%E6%94%B6%E9%9B%86%E5%B7%A5%E5%85%B7">kali信息收集工具</a></li>
-<li><a href="#%E6%B5%81%E9%87%8F%E5%88%86%E6%9E%90wireshark">流量分析WireShark</a></li>
-</ul>
-</li>
-<li><a href="#%E6%8F%8F%E8%BF%B0%E4%B8%80%E4%B8%AA%E4%BD%A0%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6%E8%BF%87%E7%9A%84cve%E6%88%96pocms17-010%E6%9C%80%E6%96%B0%E7%9A%84cve">描述一个你深入研究过的CVE或POC(ms17-010&#x2F;最新的CVE)</a></li>
-</ul>
-</li>
-<li><a href="#%E6%95%B0%E6%8D%AE%E5%BA%93%E6%B3%A8%E5%85%A5">数据库注入</a><ul>
-<li><a href="#mysql%E9%9D%A2%E8%AF%95%E9%A2%98">MySQL面试题</a><ul>
-<li><a href="#mysql%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E">MySQL存储引擎？</a></li>
-<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E4%BA%8B%E5%8A%A1">什么是事务？</a></li>
-<li><a href="#%E8%AF%BB%E9%94%81%E5%92%8C%E5%86%99%E9%94%81">读锁和写锁</a></li>
-<li><a href="#mysql%E7%9A%84%E7%B4%A2%E5%BC%95">MySQL的索引</a></li>
-<li><a href="#order-by%E5%9C%A8%E6%B3%A8%E5%85%A5%E7%9A%84%E8%BF%90%E7%94%A8">ORDER BY在注入的运用</a></li>
-<li><a href="#gpc%E6%98%AF%E4%BB%80%E4%B9%88gpc%E4%B9%8B%E5%90%8E%E6%80%8E%E4%B9%88%E7%BB%95%E8%BF%87">GPC是什么？GPC之后怎么绕过？</a></li>
-<li><a href="#mysql%E4%B8%80%E4%B8%AA%E5%92%8C%E4%B8%A4%E4%B8%AA%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB">Mysql一个@和两个@什么区别</a></li>
-<li><a href="#%E6%B3%A8%E5%85%A5%E7%BB%95%E8%BF%87%E5%B8%B8%E7%94%A8%E7%9A%84%E5%87%BD%E6%95%B0">注入&#x2F;绕过常用的函数</a></li>
-<li><a href="#mysql%E5%AD%98%E5%82%A8%E8%BF%87%E7%A8%8B">MySQL存储过程</a></li>
-<li><a href="#%E5%90%84%E7%A7%8D%E5%86%99shell%E7%9A%84%E9%97%AE%E9%A2%98">各种写shell的问题</a></li>
-</ul>
-</li>
-<li><a href="#%E6%B3%A8%E5%85%A5%E7%B1%BB%E5%9E%8B">注入类型</a></li>
-<li><a href="#sql%E6%B3%A8%E5%85%A5%E7%9A%84%E5%8E%9F%E7%90%86">SQL注入的原理</a></li>
-<li><a href="#%E8%BF%87waf">过waf</a></li>
-<li><a href="#%E5%A6%82%E4%BD%95%E8%BF%9B%E8%A1%8Csql%E6%B3%A8%E5%85%A5%E7%9A%84%E9%98%B2%E5%BE%A1">如何进行SQL注入的防御</a></li>
-<li><a href="#mysql%E7%9A%84%E7%BD%91%E7%AB%99%E6%B3%A8%E5%85%A550%E4%BB%A5%E4%B8%8A%E5%92%8C50%E4%BB%A5%E4%B8%8B%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB">mysql的网站注入，5.0以上和5.0以下有什么区别？</a></li>
-<li><a href="#sql%E5%92%8Cnosql%E7%9A%84%E5%8C%BA%E5%88%AB">SQL和NoSQL的区别</a><ul>
-<li><a href="#sql%E4%BC%98%E7%82%B9">SQL优点</a></li>
-<li><a href="#sql%E7%BC%BA%E7%82%B9">SQL缺点</a></li>
-<li><a href="#nosql%E4%BC%98%E7%82%B9">NoSQL优点</a></li>
-<li><a href="#%E6%AF%94%E8%BE%83">比较</a></li>
-<li><a href="#mongodb%E6%B3%A8%E5%85%A5%E6%96%B9%E5%BC%8F">MongoDB注入方式</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#xss-csrf-xxe">XSS CSRF XXE</a><ul>
-<li><a href="#csrf-%E5%92%8C-xss-%E5%92%8C-xxe-%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB%E4%BB%A5%E5%8F%8A%E4%BF%AE%E5%A4%8D%E6%96%B9%E5%BC%8F">CSRF 和 XSS 和 XXE 有什么区别，以及修复方式？</a></li>
-<li><a href="#csrfssrf%E5%92%8C%E9%87%8D%E6%94%BE%E6%94%BB%E5%87%BB%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB">CSRF、SSRF和重放攻击有什么区别？</a></li>
-<li><a href="#%E5%95%A5%E6%98%AF%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5%E8%B7%A8%E5%9F%9F%E6%9C%89%E5%87%A0%E7%A7%8D%E6%96%B9%E5%BC%8F">啥是同源策略，跨域有几种方式？</a></li>
-<li><a href="#%E5%A6%82%E4%BD%95%E8%A7%84%E9%81%BF%E5%90%8C%E6%BA%90%E7%AD%96%E7%95%A5">如何规避同源策略？</a><ul>
-<li><a href="#jsonp">JSONP</a><ul>
-<li><a href="#jsonp%E7%9A%84%E5%8A%AB%E6%8C%81">JSONP的劫持</a></li>
-</ul>
-</li>
-<li><a href="#websocket">WebSocket</a></li>
-<li><a href="#cors%E9%87%8D%E7%82%B9">CORS(重点)</a><ul>
-<li><a href="#%E4%B8%8Ejsonp%E7%9A%84%E6%AF%94%E8%BE%83">与JSONP的比较</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#dom-xss%E4%B8%8E%E5%8F%8D%E5%B0%84xss%E6%9C%89%E5%95%A5%E4%B8%8D%E5%90%8C%EF%BC%8C%E7%BB%99%E4%BD%A010s%EF%BC%8C%E5%A6%82%E4%BD%95%E5%BF%AB%E9%80%9F%E5%88%A4%E6%96%AD%E4%B8%80%E4%B8%AAxss%E6%98%AF%E5%90%A6%E6%98%AFdom-xss%EF%BC%9F">DOM XSS与反射XSS有啥不同，给你10s，如何快速判断一个XSS是否是DOM XSS？</a></li>
-<li><a href="#csp%E7%AD%96%E7%95%A5">CSP策略</a></li>
-<li><a href="#ssrf%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86%E6%98%AF%E4%BB%80%E4%B9%88%E5%88%A9%E7%94%A8%E6%97%B6%E6%9C%89%E5%93%AA%E4%BA%9B%E4%BC%AA%E5%8D%8F%E8%AE%AE">SSRF漏洞原理是什么？利用时有哪些伪协议？</a><ul>
-<li><a href="#%E6%BC%8F%E6%B4%9E%E5%8E%9F%E7%90%86">漏洞原理</a></li>
-<li><a href="#ssrf%E7%94%A8%E5%A4%84">ssrf用处</a></li>
-<li><a href="#%E6%BC%8F%E6%B4%9E%E5%A4%84">漏洞处</a></li>
-<li><a href="#%E7%BB%95%E8%BF%87%E5%A7%BF%E5%8A%BF">绕过姿势</a></li>
-<li><a href="#%E5%88%A9%E7%94%A8%E5%8D%8F%E8%AE%AE">利用协议</a></li>
-<li><a href="#%E6%BC%8F%E6%B4%9E%E4%BF%AE%E5%A4%8D">漏洞修复</a></li>
-</ul>
-</li>
-<li><a href="#%E5%9C%A8%E6%B5%8F%E8%A7%88%E5%99%A8%E7%AB%AFreferer%E5%8F%AF%E4%BB%A5%E7%AF%A1%E6%94%B9%E5%90%97">在浏览器端，Referer可以篡改吗？</a></li>
-<li><a href="#xss%E7%9B%B2%E6%89%93%E5%88%B0%E5%86%85%E7%BD%91%E6%9C%8D%E5%8A%A1%E5%99%A8%E7%9A%84%E5%88%A9%E7%94%A8">xss盲打到内网服务器的利用</a></li>
-<li><a href="#xss%E4%BB%A3%E7%A0%81%E5%B1%82%E9%98%B2%E5%BE%A1">xss代码层防御</a></li>
-</ul>
-</li>
-<li><a href="#%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E4%B8%8B%E8%BD%BD%E9%81%8D%E5%8E%86%E6%BC%8F%E6%B4%9E">文件上传下载遍历漏洞</a><ul>
-<li><a href="#%E5%8E%9F%E7%90%86">原理</a></li>
-<li><a href="#%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88">修复方案</a></li>
-</ul>
-</li>
-<li><a href="#%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E">文件包含漏洞</a><ul>
-<li><a href="#%E7%B1%BB%E5%9E%8B">类型</a></li>
-<li><a href="#php%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E5%87%BD%E6%95%B0">PHP文件包含函数</a></li>
-<li><a href="#%E5%88%A9%E7%94%A8">利用</a></li>
-<li><a href="#%E4%BF%AE%E5%A4%8D%E6%96%B9%E6%A1%88-1">修复方案</a></li>
-</ul>
-</li>
-<li><a href="#web%E6%A1%86%E6%9E%B6%E6%BC%8F%E6%B4%9E%E5%BC%B1%E7%82%B9">web框架漏洞弱点</a><ul>
-<li><a href="#%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%B3%A8%E5%85%A5%E4%B9%8Bflask%E6%A1%86%E6%9E%B6%E4%B8%AD%E6%9C%8D%E5%8A%A1%E7%AB%AF%E6%A8%A1%E6%9D%BF%E6%B3%A8%E5%85%A5%E9%97%AE%E9%A2%98">服务端注入之Flask框架中服务端模板注入问题</a></li>
-</ul>
-</li>
-<li><a href="#http%E5%8D%8F%E8%AE%AE">HTTP协议</a><ul>
-<li><a href="#tcp%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B">TCP三次握手四次挥手</a><ul>
-<li><a href="#%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B">三次握手</a></li>
-<li><a href="#%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B">四次挥手</a></li>
-</ul>
-</li>
-<li><a href="#%E5%9B%9B%E5%B1%82%E6%A8%A1%E5%9E%8B">四层模型</a></li>
-<li><a href="#%E5%BD%93%E4%BD%A0%E8%BE%93%E5%85%A5%E4%B8%80%E4%B8%AA%E7%BD%91%E5%9D%80%E7%82%B9%E5%87%BB%E8%AE%BF%E9%97%AE%E4%BC%9A%E5%8F%91%E7%94%9F%E4%BB%80%E4%B9%88">当你输入一个网址，点击访问，会发生什么？</a><ul>
-<li><a href="#%E6%9F%A5%E6%89%BEdns%E8%AE%B0%E5%BD%95">查找DNS记录</a></li>
-<li><a href="#%E5%BB%BA%E7%AB%8B%E8%BF%9E%E6%8E%A5">建立连接</a></li>
-</ul>
-</li>
-<li><a href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E7%8A%B6%E6%80%81%E7%A0%81">常见的状态码</a></li>
-<li><a href="#osi%E4%B8%83%E5%B1%82">OSI七层</a><ul>
-<li><a href="#osi%E5%9B%9B%E5%B1%82">OSI四层</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#%E8%B7%AF%E7%94%B1%E5%8D%8F%E8%AE%AE">路由协议</a><ul>
-<li><a href="#%E4%BD%A0%E6%90%AD%E5%BB%BA%E8%BF%87%E7%9A%84%E6%9C%80%E5%A4%8D%E6%9D%82%E7%9A%84%E7%BD%91%E7%BB%9C%E8%AE%BE%E5%A4%87%E6%98%AF%E4%BB%80%E4%B9%88">你搭建过的最复杂的网络设备是什么</a></li>
-<li><a href="#%E4%BD%BF%E7%94%A8%E8%BF%87%E4%BB%80%E4%B9%88%E7%A1%AC%E4%BB%B6%E8%AE%BE%E5%A4%87">使用过什么硬件设备</a></li>
-</ul>
-</li>
-<li><a href="#linux%E8%BF%90%E7%BB%B4">Linux运维</a><ul>
-<li><a href="#%E5%90%AF%E5%8A%A8%E8%BF%87%E7%A8%8B">启动过程</a></li>
-<li><a href="#linux%E5%9F%BA%E7%BA%BF%E8%A7%84%E8%8C%83">Linux基线规范</a><ul>
-<li><a href="#%E8%B4%A6%E5%8F%B7%E7%AE%A1%E7%90%86%E5%92%8C%E6%8E%88%E6%9D%83">账号管理和授权</a></li>
-<li><a href="#%E6%9C%8D%E5%8A%A1">服务</a></li>
-<li><a href="#%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F">文件系统</a></li>
-<li><a href="#%E6%97%A5%E5%BF%97">日志</a></li>
-<li><a href="#ip%E5%8D%8F%E8%AE%AE%E5%AE%89%E5%85%A8%E8%A6%81%E6%B1%82">IP协议安全要求</a></li>
-</ul>
-</li>
-<li><a href="#%E4%B8%AD%E9%97%B4%E4%BB%B6%E5%9F%BA%E7%BA%BF%E8%A7%84%E8%8C%83apache">中间件基线规范（APACHE）</a><ul>
-<li><a href="#%E9%85%8D%E7%BD%AE">配置</a></li>
-<li><a href="#%E7%A6%81%E6%AD%A2">禁止</a></li>
-<li><a href="#%E9%9A%90%E8%97%8F">隐藏</a></li>
-<li><a href="#%E5%88%A0%E9%99%A4">删除</a></li>
-</ul>
-</li>
-<li><a href="#webshell%E6%A3%80%E6%B5%8B%E6%80%9D%E8%B7%AF">webshell检测思路</a><ul>
-<li><a href="#%E9%9D%99%E6%80%81%E6%A3%80%E6%B5%8B">静态检测</a></li>
-<li><a href="#%E5%8A%A8%E6%80%81%E6%A3%80%E6%B5%8B">动态检测</a></li>
-<li><a href="#%E6%97%A5%E5%BF%97%E6%A3%80%E6%B5%8B">日志检测</a></li>
-<li><a href="#%E8%AF%AD%E6%B3%95%E6%A3%80%E6%B5%8B">语法检测</a></li>
-<li><a href="#%E7%BB%9F%E8%AE%A1%E5%AD%A6%E6%A3%80%E6%B5%8B">统计学检测</a></li>
-<li><a href="#%E9%98%B2%E8%8C%83webshell">防范webshell</a></li>
-</ul>
-</li>
-<li><a href="#%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1">计划任务</a></li>
-<li><a href="#%E8%87%AA%E5%8A%A8%E5%8C%96%E8%BF%90%E7%BB%B4%E7%BC%96%E5%86%99%E8%BF%87%E4%BB%80%E4%B9%88%E8%84%9A%E6%9C%AC">自动化运维编写过什么脚本</a></li>
-<li><a href="#yum%E7%94%A8%E7%9A%84%E4%BB%80%E4%B9%88%E6%BA%90%E6%9C%AC%E5%9C%B0%E8%87%AA%E6%90%AD%E6%8C%82%E8%BD%BD">yum用的什么源（本地自搭，挂载）</a></li>
-<li><a href="#awk-sed%E7%9A%84%E4%BD%BF%E7%94%A8">awk sed的使用</a></li>
-<li><a href="#%E6%8E%92%E9%94%99%E6%80%9D%E8%B7%AF%E6%8E%92%E9%94%99%E7%BB%8F%E9%AA%8C">排错思路，排错经验</a></li>
-<li><a href="#%E6%97%A5%E5%BF%97%E5%88%86%E6%9E%90elk%E7%9A%84%E4%BD%BF%E7%94%A8%E5%92%8C%E5%88%86%E6%9E%90">日志分析ELK的使用和分析</a><ul>
-<li><a href="#%E4%BA%8B%E4%BB%B6%E5%8F%91%E7%94%9F%E7%9A%84%E5%88%86%E6%9E%90">事件发生的分析</a></li>
-</ul>
-</li>
-<li><a href="#%E7%94%A8%E6%88%B7%E6%9D%83%E9%99%90%E7%AE%A1%E7%90%86%E4%BF%AE%E6%94%B9">用户权限管理(修改)</a></li>
-<li><a href="#%E9%98%B2%E7%81%AB%E5%A2%99">防火墙</a></li>
-<li><a href="#ipsec-vpn">IPsec VPN</a></li>
-<li><a href="#%E5%AE%89%E5%85%A8%E7%9B%91%E6%8E%A7%E5%B7%A5%E5%85%B7">安全监控工具</a></li>
-<li><a href="#linux%E6%9C%A8%E9%A9%AC%E6%9F%A5%E6%9D%80">Linux木马查杀</a></li>
-<li><a href="#%E5%B8%B8%E8%A7%81%E7%9A%84%E8%AE%BE%E5%A4%87%E6%9C%89%E5%95%A5">常见的设备有啥</a></li>
-</ul>
-</li>
-<li><a href="#windows%E8%BF%90%E7%BB%B4">Windows运维</a><ul>
-<li><a href="#%E5%9F%BA%E7%BA%BF%E8%A7%84%E8%8C%83">基线规范</a></li>
-<li><a href="#%E6%9C%A8%E9%A9%AC%E6%9F%A5%E6%9D%80">木马查杀</a></li>
-<li><a href="#%E8%AE%A1%E5%88%92%E4%BB%BB%E5%8A%A1-1">计划任务</a></li>
-</ul>
-</li>
-<li><a href="#iso27000%E5%92%8C%E7%AD%89%E4%BF%9D%E9%87%8D%E7%82%B9%E7%AD%89%E4%BF%9D">ISO27000和等保(重点等保)</a><ul>
-<li><a href="#%E8%AF%B4%E4%B8%80%E4%B8%8Biso27000">说一下ISO27000</a></li>
-<li><a href="#%E8%AF%B4%E4%B8%80%E4%B8%8B%E7%AD%89%E7%BA%A7%E4%BF%9D%E6%8A%A4%E5%88%B6%E5%BA%A6">说一下等级保护制度</a></li>
-<li><a href="#%E5%B7%AE%E5%BC%82">差异</a></li>
-<li><a href="#%E5%85%B1%E6%80%A7">共性</a></li>
-</ul>
-</li>
-<li><a href="#%E7%AE%97%E6%B3%95">算法</a><ul>
-<li><a href="#%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E5%BF%AB%E6%8E%92-%E4%BA%8C%E5%88%86-%E5%86%92%E6%B3%A1">排序算法：快排 二分 冒泡</a></li>
-</ul>
-</li>
-<li><a href="#ldap%E6%B3%A8%E5%85%A5">LDAP注入</a></li>
-</ul>
-</li>
-</ul>
-<blockquote>
+}</script><meta name="generator" content="Hexo 8.1.1"></head><body><div id="web_bg" style="background-image: url(/img/lo.jpeg);"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img text-center"><img src="/img/kyrie.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="site-data text-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/About%20me/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div></div></div><div class="page" id="body-wrap"><header class="not-home-page" id="page-header" style="background-image: url(/img/lo.jpeg);"><nav id="nav"><span id="blog-info"><a class="nav-site-title" href="/"><span class="site-name">漫游</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 时间轴</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/About%20me/"><i class="fa-fw fas fa-heart"></i><span> 关于我</span></a></div></div><div id="toggle-menu"><span class="site-page"><i class="fas fa-bars fa-fw"></i></span></div></div></nav><div id="page-site-info"><h1 id="site-title">技术考题分享</h1></div></header><main class="layout" id="content-inner"><div id="post"><article class="container post-content" id="article-container"><blockquote>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/25582026">https://zhuanlan.zhihu.com/p/25582026</a></p>
 </blockquote>
 <blockquote>
-<p>给你一个网站你是如何来<em>渗透测试</em>的? - 杨文的文章 - 知乎 <a target="_blank" rel="noopener" href="http://zhuanlan.zhihu.com/p/25605198">http://zhuanlan.zhihu.com/p/25605198</a></p>
+<p>这篇我觉得写得很详细全面： 给你一个网站你是如何来<em>渗透测试</em>的? - 杨文的文章 - 知乎 <a target="_blank" rel="noopener" href="http://zhuanlan.zhihu.com/p/25605198">http://zhuanlan.zhihu.com/p/25605198</a></p>
 </blockquote>
 <h1 id="技术面试问题"><a href="#技术面试问题" class="headerlink" title="技术面试问题"></a>技术面试问题</h1><h2 id="CTF"><a href="#CTF" class="headerlink" title="CTF"></a>CTF</h2><h3 id="说一个印象深刻的CTF的题目"><a href="#说一个印象深刻的CTF的题目" class="headerlink" title="说一个印象深刻的CTF的题目"></a>说一个印象深刻的CTF的题目</h3><ul>
 <li>Padding Oracle-&gt;CBC-&gt;密码学(RSA&#x2F;AES&#x2F;DSA&#x2F;SM)</li>
@@ -1108,7 +865,7 @@ btf.addGlobalFn('pjaxComplete', () => {
 <h3 id="共性"><a href="#共性" class="headerlink" title="共性"></a>共性</h3><h2 id="算法"><a href="#算法" class="headerlink" title="算法"></a>算法</h2><h3 id="排序算法：快排-二分-冒泡"><a href="#排序算法：快排-二分-冒泡" class="headerlink" title="排序算法：快排 二分 冒泡"></a>排序算法：快排 二分 冒泡</h3><h2 id="LDAP注入"><a href="#LDAP注入" class="headerlink" title="LDAP注入"></a>LDAP注入</h2><blockquote>
 <p><a target="_blank" rel="noopener" href="http://www.4hou.com/technology/9090.html">http://www.4hou.com/technology/9090.html</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/quiet_girl/article/details/50716312">https://blog.csdn.net/quiet_girl/article/details/50716312</a></p>
 </blockquote>
-</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://ycmaver.github.io">欧不爱吃HAM堡王</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://ycmaver.github.io/2025/12/19/%E6%8A%80%E6%9C%AF%E9%9D%A2%E7%9A%84%E5%88%86%E4%BA%AB/">http://ycmaver.github.io/2025/12/19/%E6%8A%80%E6%9C%AF%E9%9D%A2%E7%9A%84%E5%88%86%E4%BA%AB/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://ycmaver.github.io" target="_blank">漫游</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a></div><div class="post-share"><div class="social-share" data-image="/img/kyrie.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav id="pagination"><div class="pagination"></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/12/18/%E4%B8%80%E4%BA%9BHR%E9%97%AE%E9%A2%98%E5%92%8C%E6%A8%A1%E6%9D%BF/" title="一些HR问题和模板"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-12-18</div><div class="info-item-2">一些HR问题和模板</div></div><div class="info-2"><div class="info-item-1"> HR面 问题 对我们公司有什么了解，为什么选择本公司 为什么想要应聘这个职位 对安全服务是怎么理解的 如果我不知道渗透测试，两分钟说一下 如果我是一个汽车厂商，你如何证明你的工作是有意义的？ 作为应届生，你如何能胜任该职位 你有什么职业规划 如果离职的话是因为什么原因 你有什么优缺点 对于薪资的要求 给不了这么多工资可以接受吗？为什么想要这个数？ 进入部门后，你需要多长时间进入项目？ 上一个面试的人能力跟你差不多，但是工资方面比你要的低？ 是否可以接受加班 （沟通能力）和领导、同事产生分歧会怎么办 工作一段时间后，发现工作不是想象中的，会怎么办&#x2F;对跳槽的看法 对上司有什么要求？喜欢和什么样的领导合作？ 最有影响的一件事&#x2F;人 你还要问什么问题      HR面注意！HR面试的时候会有非常多的坑，熟悉我在这里写的问题，回答的时候情商高一点，不要跟HR吵起来，也不要有不合时宜的意见分歧，这个度最好自己能让同学、朋友担任面试官，多多挑你的刺，不断练习自己的反应能力。技术面试通过的，在HR这边通不过的例子是有很多的！ 问题对我们公司有什么了解，为什么选择本公司在信息安...</div></div></div></a><a class="pagination-related" href="/2025/12/18/%E6%83%B3%E8%87%AA%E5%AD%A6%E9%BB%91%E5%AE%A2%E5%88%B0%E5%BA%95%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88/" title="想自学黑客到底需要什么"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-12-18</div><div class="info-item-2">想自学黑客到底需要什么</div></div><div class="info-2"><div class="info-item-1">在这个只要提到黑客技术就会被嘲笑嘉豪的时代，到底需要什么去学习网安技术如果要系统式的学就去报读网络安全专业，或者去培训。 如果自学，大部分都是孤僻自闭的人，没什么家庭背景又想改变点什么的人才能学的下去，当然也有例外。 不过真要学就从网络协议入手，搞明白什么是七层模型，什么是三次握手，四次挥手，把web基础先学了。 基础学会之后如果想当黑帽就找个组织混进去(这里不好说 具体怎么找，等你进去圈子后自然知道)。 如果想到白帽就去找网络安全相关工作，从运维开始做起。 如果不想当黑帽又想进组织，直接找红客联盟，比如红客加盟在深圳有实体公司，可以去试一下，当然前提是基础要扎实，毕竟红帽将来是要为国家做事的，基础肯定得过关。 再者你只想着玩玩一些基本的攻击，不想学深，那去网上逛逛，当个脚本小子就够了。 至于要用什么编程语言，我只能说，一般黑客用不到什么编程语言，大部分用的都是指令，不过要会看懂。 一开始前后端基础都要学。 如果要用到编程，把汇编学透，可以直接用写代码，或者学python，python在世界范围内的库很多，功能也很强。 另外逻辑思维一定要好，如果逻辑不清晰，或者智商不够，就不用考...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC82MTAyOC8zNzQ5OA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/kyrie.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">欧不爱吃HAM堡王</div><div class="author-info-description">无聊就写</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">10</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">5</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/YCMaver"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/YCMaver" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:ychiefhela11@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">高一无聊瞎做的，随性而更。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/19/%E6%8A%80%E6%9C%AF%E9%9D%A2%E7%9A%84%E5%88%86%E4%BA%AB/" title="技术面试的分享">技术面试的分享</a><time datetime="2025-12-19T10:53:21.000Z" title="发表于 2025-12-19 18:53:21">2025-12-19</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/18/%E4%B8%80%E4%BA%9BHR%E9%97%AE%E9%A2%98%E5%92%8C%E6%A8%A1%E6%9D%BF/" title="一些HR问题和模板">一些HR问题和模板</a><time datetime="2025-12-18T10:53:21.000Z" title="发表于 2025-12-18 18:53:21">2025-12-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/18/%E6%83%B3%E8%87%AA%E5%AD%A6%E9%BB%91%E5%AE%A2%E5%88%B0%E5%BA%95%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88/" title="想自学黑客到底需要什么">想自学黑客到底需要什么</a><time datetime="2025-12-18T10:53:21.000Z" title="发表于 2025-12-18 18:53:21">2025-12-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/13/%E2%80%9CAI%E8%AE%BA%E6%9F%90%E5%93%81%E7%A7%8D%E5%8A%A8%E7%89%A9%E2%80%9D/" title="“AI论鸭嘴”">“AI论鸭嘴”</a><time datetime="2025-12-13T01:05:43.000Z" title="发表于 2025-12-13 09:05:43">2025-12-13</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/12/IT%E6%96%B0%E9%97%BB2025.12.12/" title="IT新闻2025.12.12">IT新闻2025.12.12</a><time datetime="2025-12-11T18:48:11.000Z" title="发表于 2025-12-12 02:48:11">2025-12-12</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/IT%E6%96%B0%E9%97%BB/" style="font-size: 1.1em; color: #999">IT新闻</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 1.5em; color: #99a9bf">网络安全</a> <a href="/tags/F1/" style="font-size: 1.3em; color: #99a1ac">F1</a> <a href="/tags/%E5%90%90%E6%A7%BD/" style="font-size: 1.5em; color: #99a9bf">吐槽</a> <a href="/tags/%E9%9F%B3%E4%B9%90%E6%8E%A8%E8%8D%90/" style="font-size: 1.1em; color: #999">音乐推荐</a></div></div><div class="card-widget card-archives">
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="http://ycmaver.github.io">欧不爱吃HAM堡王</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="http://ycmaver.github.io/2025/12/21/%E6%8A%80%E6%9C%AF%E8%80%83%E9%A2%98%E5%88%86%E4%BA%AB/">http://ycmaver.github.io/2025/12/21/%E6%8A%80%E6%9C%AF%E8%80%83%E9%A2%98%E5%88%86%E4%BA%AB/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来源 <a href="http://ycmaver.github.io" target="_blank">漫游</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"><a class="post-meta__tags" href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/">网络安全</a></div><div class="post-share"><div class="social-share" data-image="/img/kyrie.jpg" data-sites="facebook,x,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc@1.1.6/sharejs/dist/js/social-share.min.js" defer></script></div></div><nav id="pagination"><div class="pagination"></div></nav><div class="relatedPosts"><div class="headline"><i class="fas fa-thumbs-up fa-fw"></i><span>相关推荐</span></div><div class="relatedPosts-list"><a class="pagination-related" href="/2025/12/18/%E4%B8%80%E4%BA%9BHR%E9%97%AE%E9%A2%98%E5%92%8C%E6%A8%A1%E6%9D%BF/" title="一些HR问题和模板"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-12-18</div><div class="info-item-2">一些HR问题和模板</div></div><div class="info-2"><div class="info-item-1">面试注意！HR面试的时候会有非常多的坑，熟悉我在这里写的问题，回答的时候情商高一点，不要跟HR吵起来，也不要有不合时宜的意见分歧，这个度最好自己能让同学、朋友担任面试官，多多挑你的刺，不断练习自己的反应能力。技术面试通过的，在HR这边通不过的例子是有很多的！ 问题对我们公司有什么了解，为什么选择本公司在信息安全行业比较知名，了解过公司的xx产品。（每次面试某个公司，都要花5-10分钟了解该公司的产品） 为什么想要应聘这个职位从我的经历上可以很清楚地看到我对网络安全的浓厚兴趣，我认为对本职工作有兴趣的人才能更好地完成这个工作。另外也有一句话说得很棒，“你之所以看不见黑暗，是因为有人拼命把它挡在你看不到的地方”，我认为做信息安全的尤其是渗透测试，就是为了更好地保护用户的安全，防患于未然，也是我想要应聘这个岗位的理由。（不要照背，体现自己的热爱和专业能力） 对安全服务是怎么理解的安全服务对象是人， 渗透测试对象是网站。（我的理解）  安全概念和资讯 安全工具使用 渗透测试 安全基线检查 应急响应 代码审计 安全边界建设 安全规范  如果我不知道渗透测试，两分钟说一下（此处自行组织语言，...</div></div></div></a><a class="pagination-related" href="/2025/12/18/%E6%83%B3%E8%87%AA%E5%AD%A6%E9%BB%91%E5%AE%A2%E5%88%B0%E5%BA%95%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88/" title="想自学黑客到底需要什么"><div class="cover" style="background: var(--default-bg-color)"></div><div class="info text-center"><div class="info-1"><div class="info-item-1"><i class="far fa-calendar-alt fa-fw"></i> 2025-12-18</div><div class="info-item-2">想自学黑客到底需要什么</div></div><div class="info-2"><div class="info-item-1">在这个只要提到黑客技术就会被嘲笑嘉豪的时代，到底需要什么去学习网安技术如果要系统式的学就去报读网络安全专业，或者去培训。 如果自学，大部分都是孤僻自闭的人，没什么家庭背景又想改变点什么的人才能学的下去，当然也有例外。 不过真要学就从网络协议入手，搞明白什么是七层模型，什么是三次握手，四次挥手，把web基础先学了。 基础学会之后如果想当黑帽就找个组织混进去(这里不好说 具体怎么找，等你进去圈子后自然知道)。 如果想到白帽就去找网络安全相关工作，从运维开始做起。 如果不想当黑帽又想进组织，直接找红客联盟，比如红客加盟在深圳有实体公司，可以去试一下，当然前提是基础要扎实，毕竟红帽将来是要为国家做事的，基础肯定得过关。 再者你只想着玩玩一些基本的攻击，不想学深，那去网上逛逛，当个脚本小子就够了。 至于要用什么编程语言，我只能说，一般黑客用不到什么编程语言，大部分用的都是指令，不过要会看懂。 一开始前后端基础都要学。 如果要用到编程，把汇编学透，可以直接用写代码，或者学python，python在世界范围内的库很多，功能也很强。 另外逻辑思维一定要好，如果逻辑不清晰，或者智商不够，就不用考...</div></div></div></a></div></div><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="lv-container" data-id="city" data-uid="MTAyMC82MTAyOC8zNzQ5OA=="></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info text-center"><div class="avatar-img"><img src="/img/kyrie.jpg" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info-name">欧不爱吃HAM堡王</div><div class="author-info-description">无聊就写</div><div class="site-data"><a href="/archives/"><div class="headline">文章</div><div class="length-num">11</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">6</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">0</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/YCMaver"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons"><a class="social-icon" href="https://github.com/YCMaver" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:ychiefhela11@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">高一无聊瞎做的，随性而更。</div></div><div class="sticky_layout"><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/23/%E6%94%B6%E9%9B%86%E4%BA%86%E4%B8%80%E4%BA%9B%E5%8D%97%E5%A4%A7%E6%A1%88%E5%AD%90%E7%9A%84%E7%9C%8B%E6%B3%95/" title="关于南大案子本身和黑弥撒帖子的一些看法与资料收集">关于南大案子本身和黑弥撒帖子的一些看法与资料收集</a><time datetime="2025-12-23T13:50:51.000Z" title="发表于 2025-12-23 21:50:51">2025-12-23</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/21/%E6%8A%80%E6%9C%AF%E8%80%83%E9%A2%98%E5%88%86%E4%BA%AB/" title="技术考题分享">技术考题分享</a><time datetime="2025-12-21T10:53:21.000Z" title="发表于 2025-12-21 18:53:21">2025-12-21</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/18/%E4%B8%80%E4%BA%9BHR%E9%97%AE%E9%A2%98%E5%92%8C%E6%A8%A1%E6%9D%BF/" title="一些HR问题和模板">一些HR问题和模板</a><time datetime="2025-12-18T10:53:21.000Z" title="发表于 2025-12-18 18:53:21">2025-12-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/18/%E6%83%B3%E8%87%AA%E5%AD%A6%E9%BB%91%E5%AE%A2%E5%88%B0%E5%BA%95%E9%9C%80%E8%A6%81%E4%BB%80%E4%B9%88/" title="想自学黑客到底需要什么">想自学黑客到底需要什么</a><time datetime="2025-12-18T10:53:21.000Z" title="发表于 2025-12-18 18:53:21">2025-12-18</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2025/12/13/%E2%80%9CAI%E8%AE%BA%E6%9F%90%E5%93%81%E7%A7%8D%E5%8A%A8%E7%89%A9%E2%80%9D/" title="“AI论鸭嘴”">“AI论鸭嘴”</a><time datetime="2025-12-13T01:05:43.000Z" title="发表于 2025-12-13 09:05:43">2025-12-13</time></div></div></div></div><div class="card-widget card-tags"><div class="item-headline"><i class="fas fa-tags"></i><span>标签</span></div><div class="card-tag-cloud"><a href="/tags/IT%E6%96%B0%E9%97%BB/" style="font-size: 1.1em; color: #999">IT新闻</a> <a href="/tags/%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/" style="font-size: 1.5em; color: #99a9bf">网络安全</a> <a href="/tags/%E9%9F%B3%E4%B9%90%E6%8E%A8%E8%8D%90/" style="font-size: 1.1em; color: #999">音乐推荐</a> <a href="/tags/%E6%8E%A8%E7%90%86%C2%B7%E6%82%AC%E6%A1%88/" style="font-size: 1.1em; color: #999">推理·悬案</a> <a href="/tags/F1/" style="font-size: 1.3em; color: #99a1ac">F1</a> <a href="/tags/%E5%90%90%E6%A7%BD/" style="font-size: 1.5em; color: #99a9bf">吐槽</a></div></div><div class="card-widget card-archives">
     <div class="item-headline">
       <i class="fas fa-archive"></i>
       <span>归档</span>
@@ -1122,12 +879,12 @@ btf.addGlobalFn('pjaxComplete', () => {
             <span class="card-archive-list-date">
               十二月 2025
             </span>
-            <span class="card-archive-list-count">10</span>
+            <span class="card-archive-list-count">11</span>
           </a>
         </li>
       
     </ul>
-  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">10</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-12-19T14:46:17.298Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/lo.jpeg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By 欧不爱吃HAM堡王</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.2"></script><script src="/js/main.js?v=5.5.2"></script><div class="js-pjax"><script>(() => {
+  </div><div class="card-widget card-webinfo"><div class="item-headline"><i class="fas fa-chart-line"></i><span>网站信息</span></div><div class="webinfo"><div class="webinfo-item"><div class="item-name">文章数目 :</div><div class="item-count">11</div></div><div class="webinfo-item"><div class="item-name">本站访客数 :</div><div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">本站总浏览量 :</div><div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i></div></div><div class="webinfo-item"><div class="item-name">最后更新时间 :</div><div class="item-count" id="last-push-date" data-lastPushDate="2025-12-24T10:28:25.740Z"><i class="fa-solid fa-spinner fa-spin"></i></div></div></div></div></div></div></main><footer id="footer" style="background-image: url(/img/lo.jpeg);"><div class="footer-other"><div class="footer-copyright"><span class="copyright">&copy;&nbsp;2025 By 欧不爱吃HAM堡王</span><span class="framework-info"><span>框架 </span><a target="_blank" rel="noopener" href="https://hexo.io">Hexo 8.1.1</a><span class="footer-separator">|</span><span>主题 </span><a target="_blank" rel="noopener" href="https://github.com/jerryc127/hexo-theme-butterfly">Butterfly 5.5.2</a></span></div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="darkmode" type="button" title="日间和夜间模式切换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><a id="to_comment" href="#post-comment" title="前往评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js?v=5.5.2"></script><script src="/js/main.js?v=5.5.2"></script><div class="js-pjax"><script>(() => {
   const isShuoshuo = GLOBAL_CONFIG_SITE.pageType === 'shuoshuo'
 
   const loadLivere = (el, path) => {
